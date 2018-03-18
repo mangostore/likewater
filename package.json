@@ -1,0 +1,15 @@
+{
+  "name": "likewater",
+  "description": "A ghost theme is similar to admin style",
+  "version": "0.1.0",
+  "engines": {
+    "ghost": ">=1.0.0"
+  },
+  "license": "MIT",
+  "author": {
+    "email": "meteor9714@outlook.com"
+  },
+  "config": {
+    "posts_per_page": 5
+  }
+}

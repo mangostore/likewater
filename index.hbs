@@ -1,0 +1,61 @@
+{{!< default}}
+
+{{> "right-nav"}}
+
+<main class="site-index">
+    <div class="site-index-top">
+        <h2 class="site-index-title">博客</h2>
+        <div class="site-index-filter">
+            <span class="site-index-classify">
+                {{#if tag.name}}
+                    {{tag.name}}
+                {{else}}
+                    所有分类
+                {{/if}}
+                <svg viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg"><path d="M.469.18l11.5 13.143L23.469.18" transform="translate(1 2)" stroke-width="3" stroke="#0B0B0A" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <div class="site-index-dropdown">
+                    <ul>
+                        {{#get "tags" limit="all"}}
+                            <li><a href="/">所有分类</a></li>
+                            {{#foreach tags}}
+                                <li><a href="{{url}}">{{name}}</a></li>
+                            {{/foreach}}
+                        {{/get}}
+                    </ul>
+                </div>
+            </span>
+            <span class="site-index-author">
+                {{#if author.name}}
+                    {{author.name}}
+                {{else}}
+                    所有作者
+                {{/if}}
+                <svg viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg"><path d="M.469.18l11.5 13.143L23.469.18" transform="translate(1 2)" stroke-width="3" stroke="#0B0B0A" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <div class="site-index-dropdown">
+                    <ul>
+                        {{#get "users" limit="all"}}
+                            <li><a href="/">所有作者</a></li>
+                            {{#foreach users}}
+                                <li><a href="{{url}}">{{name}}</a></li>
+                            {{/foreach}}
+                        {{/get}}
+                    </ul>
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <div class="site-index-content">
+        {{#foreach posts}}
+            {{> "post-card"}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+</main>
+
+<style>
+body {
+    padding-left: 280px;
+}
+</style>

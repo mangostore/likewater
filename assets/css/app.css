@@ -1,0 +1,693 @@
+body {
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/*right-nav*/
+.right-nav {
+    width: 280px;
+    background-color: #F4F8FB;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.right-nav .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.right-nav-top {
+    padding: 30px 30px 30px 20px;
+}
+
+.right-nav-top:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.right-nav-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    float: left;
+    background: #4A90E2 no-repeat;
+    background-size: cover;
+}
+
+.right-nav-title {
+    float: left;
+    max-width: 150px;
+    padding-left: 10px;
+    color: #323232;
+}
+
+.right-nav-name {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0 5px;
+}
+
+.right-nav-slogan {
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.right-nav-search {
+    height: 38px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.right-nav-input {
+    height: 36px;
+    padding: 0 10px;
+    width: 210px;
+    border: 1px solid #ECECEC;
+    font-size: 14px;
+    color: #8E979E;
+}
+
+.right-nav-input:focus {
+    outline: 1px solid #4A90E2;
+}
+
+.right-nav-search .ion-ios-search {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 1px;
+    right: 31px;
+    cursor: pointer;
+    line-height: 36px;
+    text-align: center;
+}
+
+.right-nav-blog {
+    line-height: 30px;
+    background: #4A90E2;
+    color: #fff;
+    font-size: 14px;
+    margin: 15px 0 30px;
+    width: 230px;
+    padding-left: 20px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.right-nav-links {
+    padding-left: 20px;
+}
+
+.right-nav-classify {
+    font-size: 14px;
+    color: #949494;
+    margin-bottom: 15px;
+}
+
+.right-nav-ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+.right-nav-li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.right-nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4A4A4A;
+}
+
+.right-nav-link .icon {
+    color: #8E979E;
+}
+
+.right-nav-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    padding: 14px 30px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #E2EDF4;
+}
+
+.right-nav-bottom a {
+    color: #8397a0;
+}
+
+/*post-card*/
+.post-card {
+    padding: 15px 0;
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.post-card-image-link {
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.post-card-image {
+    width: 150px;
+    height: 90px;
+    background-size: cover;
+}
+
+.post-card-content {
+
+}
+
+.post-card-content-link {
+    text-decoration: none;
+}
+
+.post-card-title {
+    font-size: 18px;
+    color: #4A4A4A;
+    margin: 0 0 4px;
+}
+
+.post-card-info {
+    font-size: 14px;
+    color: #7D7D7D;
+    margin-bottom: 8px;
+}
+
+.post-card-info span {
+    margin-right: 25px;
+}
+
+.post-card-excerpt {
+    font-size: 14px;
+    color: #4A4A4A;
+}
+
+/*site-index*/
+.site-index {
+    padding: 0 40px 48px;
+}
+
+.site-index-filter {
+    font-size: 14px;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+}
+
+.site-index-filter span {
+    display: inline-block;
+    position: relative;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.site-index-filter svg {
+    height: 4px;
+    margin-left: 2px;
+    vertical-align: middle;
+    width: 6.11px;
+}
+
+.site-index-dropdown {
+    position: absolute;
+    box-sizing: border-box;
+    width: 180px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 5px 0 7px;
+    box-shadow: 0 0 0 1px rgba(99, 114, 130, .16), 0 8px 16px rgba(27, 39, 51, .08);
+    z-index: 1000;
+    font-size: 13px;
+    margin-top: 10px;
+    display: none;
+}
+
+.site-index-dropdown ul {
+    margin: 0;
+    padding: 0;
+}
+
+.site-index-dropdown li {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.site-index-dropdown li:hover {
+    background-color: rgba(62, 176, 239, .15);
+}
+
+.site-index-dropdown li.active:hover {
+    background-color: transparent;
+}
+
+.site-index-dropdown li a {
+    display: block;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #62767f;
+}
+
+.site-index-dropdown li.active a {
+    color: #222;
+}
+
+.site-index-pagination {
+    position: fixed;
+    left: 280px;
+    right: 0;
+    bottom: 0;
+    height: 48px;
+    border-top: 1px solid #E2EDF4;
+    background-color: #fff;
+    font-size: 14px;
+    color: #4A4A4A;
+    text-align: center;
+    line-height: 48px;
+    padding: 0 40px;
+}
+
+.site-index-pagination .link {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 6px;
+    color: #ccc;
+}
+
+.site-index-pagination .link:hover {
+    color: #4A4A4A;
+}
+
+.site-index-pagination .link.is-left {
+    float: left;
+}
+
+.site-index-pagination .link.is-right {
+    float: right;
+}
+
+/*site-post*/
+.site-post {
+    font-size: 16px;
+    width: 780px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px 50px;
+}
+
+.site-post-title {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+    padding-right: 90px;
+    position: relative;
+}
+
+.site-post-title .jiathis_style_24x24 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.site-post-info {
+    font-size: 14px;
+    color: #7D7D7D;
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 1em;
+}
+
+.site-post-info span {
+    margin-right: 25px;
+}
+
+.site-post-article {
+    padding: 1em 0 5em;
+}
+
+h2.site-post-title {
+    font-size: 1.2em;
+    padding-right: 0;
+}
+
+.site-post-relate {
+    display: flex;
+}
+
+.site-post-relate-tag {
+    padding: 10px 10px 10px 0;
+    font-size: 15px;
+    flex: 0 0 50%;
+}
+
+.site-post-relate-author {
+    padding: 10px 10px 10px 0;
+    font-size: 15px;
+    flex: 0 0 50%;
+}
+
+.site-post-decoration {
+    text-decoration: underline;
+}
+
+.site-post-relate ul {
+    margin: .5em 0;
+    padding: 0;
+}
+
+.site-post-relate ul li {
+    list-style-type: none;
+}
+
+.site-post-relate ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #556677;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.site-post-relate ul li a:hover {
+    text-decoration: underline;
+}
+
+.site-post-navigator {
+    padding: 10px 0 50px;
+    border-top: 1px solid #eee;
+}
+
+.site-post-navigator a {
+    text-decoration: none;
+    color: #556677;
+}
+
+.site-post-navigator a:hover{
+    color: #333;
+}
+.site-post-next {
+    float: right;
+}
+
+.site-post-copyright {
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    line-height: 50px;
+}
+
+/*markdown*/
+.kg-card-markdown {
+    line-height: 1.6;
+}
+
+.kg-card-markdown a {
+    text-decoration: none;
+}
+
+.kg-card-markdown a:hover {
+    border-bottom: 1px solid;
+}
+
+.kg-card-markdown abbr {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+.kg-card-markdown cite {
+    font-style: italic;
+}
+
+.kg-card-markdown hr {
+    background: #e6e6e6;
+    border: none;
+    display: block;
+    height: 1px;
+    margin-bottom: 1.4em;
+    margin-top: 1.4em;
+}
+
+.kg-card-markdown img {
+    vertical-align: text-bottom;
+    max-width: 100%;
+}
+
+.kg-card-markdown ins {
+    background-color: lime;
+    text-decoration: none;
+}
+
+.kg-card-markdown mark {
+    background-color: #ff0;
+}
+
+.kg-card-markdown small {
+    font-size: 0.8em;
+}
+
+.kg-card-markdown strong {
+    font-weight: 700;
+}
+
+.kg-card-markdown sub, .kg-card-markdown sup {
+    font-size: 0.8em;
+}
+
+.kg-card-markdown sub {
+    vertical-align: sub;
+}
+
+.kg-card-markdown sup {
+    vertical-align: super;
+}
+
+.kg-card-markdown p, .kg-card-markdown dl, .kg-card-markdown ol, .kg-card-markdown ul, .kg-card-markdown blockquote, .kg-card-markdown pre, .kg-card-markdown table {
+    margin-bottom: 1.4em;
+}
+
+.kg-card-markdown p:last-child, .kg-card-markdown dl:last-child, .kg-card-markdown ol:last-child, .kg-card-markdown ul:last-child, .kg-card-markdown blockquote:last-child, .kg-card-markdown pre:last-child, .kg-card-markdown table:last-child {
+    margin-bottom: 0;
+}
+
+.kg-card-markdown p:empty {
+    display: none;
+}
+
+.kg-card-markdown h1, .kg-card-markdown h2, .kg-card-markdown h3, .kg-card-markdown h4, .kg-card-markdown h5, .kg-card-markdown h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.kg-card-markdown h1:first-child, .kg-card-markdown h2:first-child, .kg-card-markdown h3:first-child, .kg-card-markdown h4:first-child, .kg-card-markdown h5:first-child, .kg-card-markdown h6:first-child {
+    margin-top: 0;
+}
+
+.kg-card-markdown h1 {
+    font-size: 2.4em;
+    margin-bottom: .58333em;
+    margin-top: .58333em;
+    line-height: 1;
+}
+
+.kg-card-markdown h2 {
+    font-size: 1.6em;
+    margin-bottom: .875em;
+    margin-top: 1.75em;
+    line-height: 1.1;
+}
+
+.kg-card-markdown h3 {
+    font-size: 1.3em;
+    margin-bottom: 1.07692em;
+    margin-top: 1.07692em;
+}
+
+.kg-card-markdown h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.16667em;
+    margin-top: 1.16667em;
+}
+
+.kg-card-markdown h5 {
+    font-size: 1.1em;
+    margin-bottom: 1.27273em;
+    margin-top: 1.27273em;
+}
+
+.kg-card-markdown h6 {
+    font-size: 1em;
+    margin-bottom: 1.4em;
+    margin-top: 1.4em;
+}
+
+.kg-card-markdown dd {
+    margin-left: 1.4em;
+}
+
+.kg-card-markdown ol, .kg-card-markdown ul {
+    list-style-position: outside;
+    margin-left: 1.4em;
+}
+
+.kg-card-markdown ol {
+    list-style-type: decimal;
+}
+
+.kg-card-markdown ol ol {
+    list-style-type: lower-alpha;
+}
+
+.kg-card-markdown ol ol ol {
+    list-style-type: lower-roman;
+}
+
+.kg-card-markdown ol ol ol ol {
+    list-style-type: lower-greek;
+}
+
+.kg-card-markdown ol ol ol ol ol {
+    list-style-type: decimal;
+}
+
+.kg-card-markdown ol ol ol ol ol ol {
+    list-style-type: lower-alpha;
+}
+
+.kg-card-markdown ul {
+    list-style-type: disc;
+}
+
+.kg-card-markdown ul ul {
+    list-style-type: circle;
+}
+
+.kg-card-markdown ul ul ul {
+    list-style-type: square;
+}
+
+.kg-card-markdown ul ul ul ul {
+    list-style-type: circle;
+}
+
+.kg-card-markdown ul ul ul ul ul {
+    list-style-type: disc;
+}
+
+.kg-card-markdown ul ul ul ul ul ul {
+    list-style-type: circle;
+}
+
+.kg-card-markdown blockquote {
+    border-left: 4px solid #e6e6e6;
+    padding: 0.6em 1.2em;
+}
+
+.kg-card-markdown blockquote p:first-child {
+    margin-top: 0;
+}
+
+.kg-card-markdown blockquote p {
+    margin-bottom: 0;
+}
+
+.kg-card-markdown code, .kg-card-markdown kbd, .kg-card-markdown samp, .kg-card-markdown pre {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.kg-card-markdown code, .kg-card-markdown kbd, .kg-card-markdown samp {
+    border-radius: 3px;
+    line-height: 1.77778;
+    padding: 0.1em 0.4em 0.2em;
+    vertical-align: baseline;
+}
+
+.kg-card-markdown pre {
+    overflow: auto;
+    padding: 1em 1.2em;
+}
+
+.kg-card-markdown pre code {
+    background: none;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.kg-card-markdown figure {
+    margin-bottom: 2.8em;
+    text-align: center;
+}
+
+.kg-card-markdown figure:first-child {
+    margin-top: 0;
+}
+
+.kg-card-markdown figure:last-child {
+    margin-bottom: 0;
+}
+
+.kg-card-markdown figcaption {
+    font-size: 0.8em;
+    margin-top: .875em;
+}
+
+.kg-card-markdown table {
+    width: 100%;
+}
+
+.kg-card-markdown table pre {
+    white-space: pre-wrap;
+}
+
+.kg-card-markdown th, .kg-card-markdown td {
+    font-size: 1em;
+    padding: .7em;
+    border: 1px solid #e6e6e6;
+    line-height: 1.4;
+}
+
+.kg-card-markdown thead tr, .kg-card-markdown tfoot tr {
+    background-color: #f5f5f5;
+}
+
+.kg-card-markdown thead th, .kg-card-markdown thead td, .kg-card-markdown tfoot th, .kg-card-markdown tfoot td {
+    font-size: .9em;
+    padding: .77778em;
+}
+
+.kg-card-markdown thead th code, .kg-card-markdown thead td code, .kg-card-markdown tfoot th code, .kg-card-markdown tfoot td code {
+    background-color: #fff;
+}
+
+.kg-card-markdown tbody tr {
+    background-color: #fff;
+}

@@ -1,0 +1,22 @@
+<article class="post-card">
+    {{#if feature_image}}
+        <a class="post-card-image-link" href="{{url}}" target="_blank">
+            <div class="post-card-image" style="background-image: url({{feature_image}})"></div>
+        </a>
+    {{/if}}
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="{{url}}" target="_blank">
+            <h2 class="post-card-title">{{title}}</h2>
+        </a>
+        <div class="post-card-info">
+            作者：<span class="post-card-author">{{author.name}}</span>
+            分类：{{#if primary_tag}} <span class="post-card-tags">{{primary_tag.name}}</span> {{/if}}
+            日期：{{date format="YYYY/MM/DD"}}
+        </div>
+        <a class="post-card-content-link" href="{{url}}" target="_blank">
+            <section class="post-card-excerpt">
+                {{excerpt words="33"}}
+            </section>
+        </a>
+    </div>
+</article>

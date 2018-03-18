@@ -1,0 +1,95 @@
+{{!< default}}
+
+{{#post}}
+    <div class="site-post">
+        <h1 class="site-post-title">
+            {{title}}
+            <!-- JiaThis Button BEGIN -->
+            <div class="jiathis_style_24x24">
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+            <!-- JiaThis Button END -->
+        </h1>
+        <div class="site-post-info">
+            作者：<span class="site-post-author">{{author.name}}</span>
+            分类：{{#if primary_tag}} <span class="site-post-tags">{{primary_tag.name}}</span> {{/if}}
+            日期：{{date format="YYYY/MM/DD"}}
+        </div>
+        <article class="site-post-article">
+            {{content}}
+        </article>
+        <h2 class="site-post-title">相关文章</h2>
+        <section class="site-post-relate">
+            {{#if primary_tag}}
+                {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+                    {{#if related_posts}}
+                        <div class="site-post-relate-tag">
+                            分类：<span class="site-post-decoration">{{../primary_tag.name}}</span>
+                            <ul>
+                                {{#foreach related_posts}}
+                                    <li><a href="{{url}}">{{title}}</a></li>
+                                {{/foreach}}
+                            </ul>
+                        </div>
+                    {{/if}}
+                {{/get}}
+            {{/if}}
+            {{#if author}}
+                {{#get "posts" filter="author:{{author.slug}}+id:-{{id}}" limit="3" as |author_posts|}}
+                    {{#if author_posts}}
+                        <div class="site-post-relate-author">
+                            作者：<span class="site-post-decoration">{{../author.name}}</span>
+                            <ul>
+                                {{#foreach author_posts}}
+                                    <li><a href="{{url}}">{{title}}</a></li>
+                                {{/foreach}}
+                            </ul>
+                        </div>
+                    {{/if}}
+                {{/get}}
+            {{/if}}
+        </section>
+        <section class="site-post-navigator">
+            {{#prev_post}}
+                <a class="site-post-prev" href="{{url}}"><i class="icon ion-android-arrow-back"></i> {{title}}</a>
+            {{/prev_post}}
+            {{#next_post}}
+                <a class="site-post-next" href="{{url}}">{{title}} <i class="icon ion-ios-arrow-forward"></i></a></a>
+            {{/next_post}}
+        </section>
+
+        <div id="disqus_thread"></div>
+        <script>
+
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://likewater-cn.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <div class="site-post-copyright">
+        由 Hexo 强力驱动  主题 - LikerWater
+    </div>
+{{/post}}
+
+<style>
+    body {
+        background: #F4F8FB;
+    }
+</style>
