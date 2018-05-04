@@ -4,7 +4,7 @@
 
 ### Exaple
 
-[likewater.space](http://www.likewater.space)
+[likewater.space](http://likewater.space)
 
 ### How to use
 1. download zip on github
