@@ -3,6 +3,7 @@
 > A ghost theme is similar to admin style
 
 ### Exaple
+![likewater主题](http://ocwv3msh2.bkt.clouddn.com/screen.png)
 
 [likewater.space](http://likewater.space)
 
