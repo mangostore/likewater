@@ -1,6 +1,6 @@
 {{!< default}}
 
-{{> "right-nav"}}
+{{> "left-nav"}}
 
 <main class="site-index">
     <div class="site-index-top">
@@ -48,6 +48,11 @@
     <div class="site-index-content">
         {{#foreach posts}}
             {{> "post-card"}}
+        {{else}}
+            <div class="site-index-no-data">
+                <i class="ion-social-dropbox-outline"></i>
+                暂时没有相关文章
+            </div>
         {{/foreach}}
     </div>
 

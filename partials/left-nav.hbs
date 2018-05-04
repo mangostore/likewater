@@ -1,0 +1,25 @@
+<aside class="left-nav">
+    <div class="left-nav-top">
+        <div class="left-nav-logo" style="background-image: url('{{@blog.logo}}')" alt="{{@blog.title}}"></div>
+        <div class="left-nav-title">
+            <h1 class="left-nav-name">{{@blog.title}}</h1>
+            <p class="left-nav-slogan">{{@blog.description}}</p>
+        </div>
+    </div>
+    <div class="left-nav-search">
+        <input id="searchInput" class="left-nav-input" type="text" placeholder="关键词搜索">
+        <i class="icon ion-ios-search"></i>
+    </div>
+    <div class="left-nav-blog">
+        <i class="icon ion-ios-paper-outline"></i>博客
+    </div>
+    <div class="left-nav-links">
+        <div class="left-nav-classify">相关链接</div>
+        {{navigation}}
+    </div>
+    <div class="left-nav-bottom">
+        <a href="https://github.com/meteor9714" target="_blank"><i class="icon ion-social-github"></i></a>
+        <a href="{{@blog.url}}/rss/"><i class="icon ion-social-rss"></i></a>
+        <a href="mailto:247196566@qq.com"><i class="icon ion-android-mail"></i></a>
+    </div>
+</aside>

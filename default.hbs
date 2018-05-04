@@ -7,14 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="HandheldFriendly" content="True" />
     <title>{{meta_title}}</title>
+    <link rel="stylesheet" type="text/css" href="/libs/remodal/remodal.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/gsearch/css/jquery.gsearch.min.css">
     <link rel="stylesheet" href="{{asset "font/ionicons/css/ionicons.css"}}">
     <link rel="stylesheet" href="{{asset "css/app.css"}}">
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
     {{{body}}}
-
+    {{> "gsearch"}}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/libs/remodal/remodal.min.js"></script>
+    <script type="text/javascript" src="/libs/gsearch/js/jquery.gsearch.min.js"></script>
     <script src="{{asset "js/app.js"}}"></script>
     {{ghost_foot}}
 </body>

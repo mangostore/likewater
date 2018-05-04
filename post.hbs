@@ -21,36 +21,15 @@
         <article class="site-post-article">
             {{content}}
         </article>
-        <h2 class="site-post-title">相关文章</h2>
+        <h2 class="site-post-title">你可能感兴趣的文章</h2>
         <section class="site-post-relate">
-            {{#if primary_tag}}
-                {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
-                    {{#if related_posts}}
-                        <div class="site-post-relate-tag">
-                            分类：<span class="site-post-decoration">{{../primary_tag.name}}</span>
-                            <ul>
-                                {{#foreach related_posts}}
-                                    <li><a href="{{url}}">{{title}}</a></li>
-                                {{/foreach}}
-                            </ul>
-                        </div>
-                    {{/if}}
-                {{/get}}
-            {{/if}}
-            {{#if author}}
-                {{#get "posts" filter="author:{{author.slug}}+id:-{{id}}" limit="3" as |author_posts|}}
-                    {{#if author_posts}}
-                        <div class="site-post-relate-author">
-                            作者：<span class="site-post-decoration">{{../author.name}}</span>
-                            <ul>
-                                {{#foreach author_posts}}
-                                    <li><a href="{{url}}">{{title}}</a></li>
-                                {{/foreach}}
-                            </ul>
-                        </div>
-                    {{/if}}
-                {{/get}}
-            {{/if}}
+            {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+                <ul>
+                    {{#foreach related_posts}}
+                        <li><a href="{{url}}">{{title}}</a></li>
+                    {{/foreach}}
+                </ul>
+            {{/get}}
         </section>
         <section class="site-post-navigator">
             {{#prev_post}}
@@ -63,7 +42,6 @@
 
         <div id="disqus_thread"></div>
         <script>
-
             /**
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -84,7 +62,9 @@
     </div>
 
     <div class="site-post-copyright">
-        由 Hexo 强力驱动  主题 - LikerWater
+        由 <a href="https://ghost.org/">Ghost</a> 强力驱动
+        &nbsp;&nbsp;
+        主题 - <a href="https://github.com/meteor9714/likewater">LikerWater</a>
     </div>
 {{/post}}
 

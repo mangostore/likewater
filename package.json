@@ -7,9 +7,10 @@
   },
   "license": "MIT",
   "author": {
+    "name": "meteor9714",
     "email": "meteor9714@outlook.com"
   },
   "config": {
-    "posts_per_page": 5
+    "posts_per_page": 20
   }
 }
